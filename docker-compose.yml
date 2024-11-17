@@ -31,7 +31,7 @@ services:
     image: dbeaver/cloudbeaver
     container_name: cloudbeaver-container
     ports:
-      - "8082:8082"
+      - "8082:8978"
     networks:
       - app-network
     env_file:
