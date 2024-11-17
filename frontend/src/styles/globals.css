@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 20, 33, 61; /* Navy blue for text in light mode */
+  --background-start-rgb: 224, 247, 250; /* Light cyan start */
+  --background-end-rgb: 173, 216, 230; /* Light blue end */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 173, 216, 230; /* Light blue for text in dark mode */
+    --background-start-rgb: 15, 32, 61; /* Dark navy blue start */
+    --background-end-rgb: 23, 42, 78; /* Dark blue end */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
