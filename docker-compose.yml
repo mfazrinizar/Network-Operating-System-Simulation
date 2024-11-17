@@ -24,8 +24,8 @@ services:
       - "8081:8081"
     networks:
       - app-network
-    environment:
-      - APP_ENV=production
+    env_file:
+      - ./backend/.env
 
   db:
     image: dbeaver/cloudbeaver
@@ -34,14 +34,8 @@ services:
       - "8082:8082"
     networks:
       - app-network
-    environment:
-      - CB_SECURITY_ENABLED=true
-      - CB_USER=admin
-      - CB_PASSWORD=examplepw
-      - CB_DATASOURCE_NAME=PostgreSQL-DB
-      - CB_DATASOURCE_URL=jdbc:postgresql://192.168.8.30:5432
-      - CB_DATASOURCE_USER=postgres
-      - CB_DATASOURCE_PASSWORD=examplepw
+    env_file:
+      - ./database/.env
     restart: unless-stopped
 
 networks:
