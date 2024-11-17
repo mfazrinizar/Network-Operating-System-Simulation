@@ -45,7 +45,7 @@ func InitializeApp(app *fiber.App) {
 		DB: db,
 	}
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "http://localhost:3000, https://mfazrinizar.com, https://www.mfazrinizar.com",
+		AllowOrigins: "http://localhost:3000, https://mfazrinizar.com, http://mfazrinizar.com, http://www.mfazrinizar.com, https://www.mfazrinizar.com, http://192.168.8.40:3000",
 		AllowHeaders: "Origin,Content-Type,Accept,Content-Length,Accept-Language,Accept-Encoding,Connection,Access-Control-Allow-Origin,Authorization",
 		// AllowOriginsFunc: func(origin string) bool {
 		// 	return origin == "http://localhost:3000" || origin == "https://mfazrinizar.com"
